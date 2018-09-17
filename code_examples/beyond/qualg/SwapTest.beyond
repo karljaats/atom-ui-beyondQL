@@ -1,0 +1,63 @@
+package beyond.qualg;
+
+public class SwapTest {
+    
+    public static fridge bool swaptest(constexpr int n, QuReg<n> x, QuReg<n> y)
+            compile_time_assert( n >= 1 )
+            compile_time_assert( n < 10 , "Sorry, I'm lazy")
+            code_below;
+    
+    public static fridge bool swaptest(constexpr uint n, QuBit[n] x, QuBit[n] y);
+    
+    // non-static
+    
+    public constexpr uint n compile_time_assert( n >= 1 ) compile_time_assert( n < 10 , "Sorry, I'm lazy");
+    private QuBit a;
+    
+    public SwapTest(constexpr int n) compile_time_assert( n > 0 , "Oops") {
+        this.n = n;
+        a = new Qubit;
+    }
+    
+    private unitary
+    void  autoPrepare() {
+        Gates.hadamard(a);
+    }
+    
+    public unitary QuBool apply(QuBit[n] x, QuBit[n] y) {
+        for(int i=0; i<n; ++i) {
+            ctrl (a) {
+                Gates.swap(x[i],y[i]);
+            }
+        }
+        Gates.hadamard(a);
+        return a;
+    }
+}
+
+delayed_code
+fridge bool swaptest(constexpr uint n, QuReg<n> x, QuReg<n> y) {
+     QuBit a = new QuBit();
+     Gates.hadamard(a);
+     for (int i=0; i<n; ++i) {
+          ctrl(a) {
+              Gates.swap(x.at(i),y.at(i));
+          }
+     }
+     fridge bool equal = Gates.measureX(a);
+     return equal;
+}
+
+delayed_code
+unitary fridge bool swaptest(constexpr uint n, QuBit[n] x, QuBit[n] y, QuBool a) {
+     QuBit a = new QuBit();
+     Gates.hadamard(a);
+     for (int i=0; i<n; ++i) {
+         ctrl(a) {
+             Gates.swap(x[i],y[i]);
+         }
+     }
+     Gates.hadamard(a);
+     return Gates.measure(a);
+}
+

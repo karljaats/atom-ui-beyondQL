@@ -1,0 +1,27 @@
+package com.ketita.my_beyond_program;
+
+import beyond.qualg.SwapTest;
+import beyond.lang.Gates;
+
+public class Main {
+    
+    public static void main(PyCallback<Integer, Integer> callback1,
+            PyCallback<List<Float>> callback2,
+            PyCallback<Float[n]> callback3,
+            constexpr double epsilon,
+            constexpr int n,
+            QRAM<Int<3>> a,
+            QRAM<Fixed<3,4>> x) code_below;
+}
+
+delayed_code
+void Main.main(PyCallback<Integer, Integer> callback, ....) {
+    fridge int x,y;
+    QuInt<14> x = new QuInt();
+    QuInt<14> y = new QuInt();
+    ...;
+    SwapTest.swaptest(14,x,y);
+    ....;
+    callback.run(x,y);
+}
+

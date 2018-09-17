@@ -1,0 +1,11 @@
+package beyond.qualg;
+
+
+public class AmplitudeAmplification<T> {
+    public static unitary void amplitudeAmplification(Unitary<T> G, Unitary<T> R, QuRegister start) code_below;
+}
+
+delayed_code
+unitary void AmplitudeAmplification.amplitudeAmplification(Unitary<T> G, Unitary<T> R, QuRegister start) {
+    ...
+}
