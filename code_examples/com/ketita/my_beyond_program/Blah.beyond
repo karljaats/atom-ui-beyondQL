@@ -1,6 +1,13 @@
 package com.ketita.my_beyond_program;
 
-public static unitary void blah(constexpr int bitLength, QuInt<bitLength> x, QuInt<bitLength> y) {
-    ...;
+import beyond.lang.Gates;
+
+public class Blah {
+    public static unitary void blah(constexpr int bitLength, QuInt<bitLength> x, QuInt<bitLength> y) {
+        for(int i = 0; i < bitLength; i++) {
+            Gates.hadamard(x.at(i));
+            Gates.hadamard(y.at(i));
+        }
+    }
 }
 

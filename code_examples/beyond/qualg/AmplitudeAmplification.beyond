@@ -1,11 +1,15 @@
 package beyond.qualg;
 
-
-public class AmplitudeAmplification<T> {
-    public static unitary void amplitudeAmplification(Unitary<T> G, Unitary<T> R, QuRegister start) code_below;
+public class AmplitudeAmplification {
+    public static unitary void amplitudeAmplification(Unitary<QuRegister> G, Unitary<QuRegister> R, QuRegister start) code_below;
 }
 
 delayed_code
-unitary void AmplitudeAmplification.amplitudeAmplification(Unitary<T> G, Unitary<T> R, QuRegister start) {
-    ...
+unitary void AmplitudeAmplification.amplitudeAmplification(Unitary<QuRegister> G, Unitary<QuRegister> R, QuRegister start) {
+    /*This method still has to be changed to be meaningfull - right now it's just an example of how the syntax works*/
+    QuRegister reg = start;
+    for(int i; i < 8; i++) {
+        G(reg); //Equivalently this line could be "G.apply(start);"
+        R(reg); //Equivalently this line could be "R.apply(start);"
+    }
 }

@@ -2,6 +2,7 @@ package com.ketita.my_beyond_program;
 
 import beyond.qualg.SwapTest;
 import beyond.lang.Gates;
+import com.ketita.my_beyond_program.Blah;
 
 public class Main {
     
@@ -11,17 +12,29 @@ public class Main {
             constexpr double epsilon,
             constexpr int n,
             QRAM<Int<3>> a,
-            QRAM<Fixed<3,4>> x) code_below;
+            QRAM<Fixed<3,4>> blubb) code_below;
 }
 
 delayed_code
-void Main.main(PyCallback<Integer, Integer> callback, ....) {
+void Main.main(PyCallback<Integer, Integer> callback1,
+            PyCallback<List<Float>> callback2,
+            PyCallback<Float[n]> callback3,
+            constexpr double epsilon,
+            constexpr int n,
+            QRAM<Int<3>> a,
+            QRAM<Fixed<3,4>> blubb) {
     fridge int x,y;
-    QuInt<14> x = new QuInt();
-    QuInt<14> y = new QuInt();
-    ...;
-    SwapTest.swaptest(14,x,y);
-    ....;
+    QuInt<n> qx = new QuInt();
+    QuInt<n> qy = new QuInt();
+    Blah.blah(n, qy, qx);
+    fridge bool result = SwapTest.swaptest(n, qx, qy);
+    if(result == true) {
+        x = 4;
+        y = n;
+    } else {
+        x = n;
+        y = 4;
+    }
     callback.run(x,y);
 }
 
