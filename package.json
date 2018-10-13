@@ -1,10 +1,9 @@
 {
-  "name": "ide-java",
+  "name": "ide-beyondql",
   "main": "./lib/main",
-  "version": "0.8.3",
-  "description": "Java language support for Atom-IDE.",
-  "repository": "https://github.com/atom/ide-java",
-  "license": "MIT",
+  "version": "0.0.1",
+  "description": "BeyondQL language support for Atom-IDE.",
+  "license": "AGPL-3.0 ",
   "scripts": {
     "test": "atom --test test"
   },

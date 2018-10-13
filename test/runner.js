@@ -13,7 +13,7 @@ global.stress = function(count, ...args) {
 }
 
 module.exports = createRunner({
-  htmlTitle: `IDE-Java Package Tests - pid ${process.pid}`,
+  htmlTitle: `ide-beyondql Package Tests - pid ${process.pid}`,
   reporter: process.env.MOCHA_REPORTER || 'spec',
   overrideTestPaths: [/spec$/, /test/],
 }, mocha => {
