@@ -3,7 +3,7 @@
   "main": "./lib/main",
   "version": "0.0.0",
   "description": "BeyondQL language support for Atom-IDE.",
-  "repository": "https://github.com/dojt/atom-ui-beyondQL",
+  "repository": "https://github.com/karljaats/atom-ui-beyondQL",
   "license": "AGPL-3.0 ",
   "scripts": {
     "test": "atom --test test"
