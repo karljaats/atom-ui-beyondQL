@@ -1,14 +1,16 @@
 {
   "name": "ide-beyondql",
   "main": "./lib/main",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "BeyondQL language support for Atom-IDE.",
   "repository": "https://github.com/karljaats/atom-ui-beyondQL",
   "license": "AGPL-3.0 ",
   "scripts": {
     "test": "atom --test test"
   },
-  "engines": {"atom": ">=1.0.0 <2.0.0"},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
   "configSchema": {
     "javaHome": {
       "order": 10,
