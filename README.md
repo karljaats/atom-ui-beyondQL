@@ -11,4 +11,5 @@ From the Atom package manager install
 * ide-beyondql
 * language-beyond
 
+## Release Notes
 [Latest Release Notes](https://github.com/karljaats/atom-ui-beyondQL/wiki/Release-notes#Iteration2.2)
