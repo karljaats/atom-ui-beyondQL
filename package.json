@@ -64,7 +64,7 @@
     "mocha-junit-and-console-reporter": "^1.6.0"
   },
   "enhancedScopes": [
-    "source.java"
+    "source.beyond"
   ],
   "consumedServices": {
     "linter-indie": {
