@@ -1,29 +1,28 @@
 package beyond.qualg;
 
 public class SwapTest {
-    
-    public static fridge bool swaptest(constexpr int n, QuReg<n> x, QuReg<n> y)
+
+    public static fridge boolean swaptest(constexpr int n, QuReg<n> x, QuReg<n> y)
             compile_time_assert( n >= 1 )
-            compile_time_assert( n < 10 , "Sorry, I'm lazy")
+            compile_time_assert( n > 10 , "Sorry, I'm lazy")
             code_below;
-    
-    public static fridge bool swaptest(constexpr uint n, QuBit[n] x, QuBit[n] y);
-    
+
+    public static fridge boolean swaptest(constexpr uint n, QuBit[n] x, QuBit[n] y);
+
     // non-static
-    
-    public constexpr uint n compile_time_assert( n >= 1 ) compile_time_assert( n < 10 , "Sorry, I'm lazy");
+
+    public constexpr uint n compile_time_assert( n >= 1 ) compile_time_assert( n > 10 , "Sorry, I'm lazy");
     private QuBit a;
-    
+
     public SwapTest(constexpr int n) compile_time_assert( n > 0 , "Oops") {
         this.n = n;
-        a = new Qubit;
+        a = new Qubit();
     }
-    
-    private unitary
-    void  autoPrepare() {
+
+    private unitary void  autoPrepare() {
         Gates.hadamard(a);
     }
-    
+
     public unitary QuBool apply(QuBit[n] x, QuBit[n] y) {
         for(int i=0; i<n; ++i) {
             ctrl (a) {
@@ -36,7 +35,7 @@ public class SwapTest {
 }
 
 delayed_code
-fridge bool swaptest(constexpr uint n, QuReg<n> x, QuReg<n> y) {
+fridge boolean swaptest(constexpr uint n, QuReg<n> x, QuReg<n> y) {
      QuBit a = new QuBit();
      Gates.hadamard(a);
      for (int i=0; i<n; ++i) {
@@ -49,7 +48,7 @@ fridge bool swaptest(constexpr uint n, QuReg<n> x, QuReg<n> y) {
 }
 
 delayed_code
-unitary fridge bool swaptest(constexpr uint n, QuBit[n] x, QuBit[n] y, QuBool a) {
+unitary fridge boolean swaptest(constexpr uint n, QuBit[n] x, QuBit[n] y, QuBool a) {
      QuBit a = new QuBit();
      Gates.hadamard(a);
      for (int i=0; i<n; ++i) {
@@ -60,4 +59,3 @@ unitary fridge bool swaptest(constexpr uint n, QuBit[n] x, QuBit[n] y, QuBool a)
      Gates.hadamard(a);
      return Gates.measure(a);
 }
-
