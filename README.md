@@ -12,4 +12,4 @@ From the Atom package manager install
 * language-beyond
 
 ## Release Notes
-[Latest Release Notes](https://github.com/karljaats/atom-ui-beyondQL/wiki/Release-notes#Iteration3)
+[Latest Release Notes](https://github.com/karljaats/atom-ui-beyondQL/wiki/Release-notes#Iteration4)
